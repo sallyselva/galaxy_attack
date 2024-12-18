@@ -1,6 +1,6 @@
 {
-    "name": "Galaxy Attack",
-    "version": "0.0.1",
+    "name": "Galaxy Attack_Yellow",
+    "version": "0.0.3",
     "description": "",
     "dependencies": {
         "device": "*",
@@ -24,12 +24,11 @@
         "test.ts"
     ],
     "targetVersions": {
-        "target": "1.12.56",
+        "target": "1.12.57",
         "targetId": "arcade"
     },
     "supportedTargets": [
         "arcade"
     ],
     "preferredEditor": "tsprj"
-    "disableTargetTemplateFiles": true
 }
