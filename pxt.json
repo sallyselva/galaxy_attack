@@ -1,6 +1,6 @@
 {
     "name": "Galaxy_Attack_Yellow",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "",
     "dependencies": {
         "device": "*",
