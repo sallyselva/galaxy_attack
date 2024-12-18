@@ -1,11 +1,11 @@
 {
-    "name": "Galaxy_Attack_Orange",
+    "name": "Galaxy_Attack_Green",
     "version": "0.0.6",
     "description": "",
     "dependencies": {
         "device": "*",
         "pxt-status-bar": "github:jwunderl/pxt-status-bar#v0.4.2",
-        "arcade-background-scroll": "github:microsoft/arcade-background-scroll#6cfbf925b9a4d5ddf3e1078e6cf6ca6a1aebb301",
+        "arcade-background-scroll": "github:microsoft/arcade-background-scroll#v0.1.2",
         "carnival": "github:microsoft/arcade-carnival#v0.0.7"
     },
     "files": [
@@ -30,5 +30,5 @@
     "supportedTargets": [
         "arcade"
     ],
-    "preferredEditor": "blocksprj"
+    "preferredEditor": "tsprj"
 }
