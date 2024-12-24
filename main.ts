@@ -8,24 +8,29 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite2, otherSprite2) {
     scene.cameraShake(8, 500)
     info.changeLifeBy(-1)
-    enemyDeath(otherSprite2)
-    music.play(music.melodyPlayable(music.powerDown), music.PlaybackMode.UntilDone)
     if (info.life() == 0) {
         web.open("https://115.111.238.147:889/api/ECommReflection?playername=" + info.score() + "&score=" + info.score())
         game.over(false)
     }
+    enemyDeath(otherSprite2)
+    music.play(music.melodyPlayable(music.powerDown), music.PlaybackMode.UntilDone)    
 })
 statusbars.onZero(StatusBarKind.EnemyHealth, function (status) {
     music.play(music.melodyPlayable(music.baDing), music.PlaybackMode.UntilDone)
     enemyDeath(status.spriteAttachedTo())
 })
-function enemyDeath (enemy: Sprite) {
+function enemyDeath(enemy: Sprite) {
     sprites.destroy(enemy, effects.disintegrate, 500)
 }
+info.onLifeZero(function () {    
+    carnival.customGameOverExpanded("You Died")
+    carnival.onGameOverExpanded(carnival.WinTypes.Score)
+    
+})
 sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function (sprite, otherSprite) {
     statusbars.getStatusBarAttachedTo(StatusBarKind.EnemyHealth, otherSprite).value += -30
     info.changeScoreBy(1)
-    sprites.destroy(sprite, effects.disintegrate, 500)    
+    sprites.destroy(sprite, effects.disintegrate, 500)
 })
 let statusbar: StatusBarSprite = null
 let enemyShip: Sprite = null
@@ -36,8 +41,8 @@ mySprite = sprites.create(assets.image`myImage6`, SpriteKind.Player)
 controller.moveSprite(mySprite)
 mySprite.setStayInScreen(true)
 info.setScore(0)
-info.setLife(5)
-music.play(music.createSong(hex`00780004080200`), music.PlaybackMode.LoopingInBackground)
+info.setLife(1)
+scroller.scrollBackgroundWithSpeed(-90, 0)
 game.onUpdateInterval(2000, function () {
     enemyShip = sprites.create(img`
         ........................
@@ -66,7 +71,7 @@ game.onUpdateInterval(2000, function () {
         ........................
         `, SpriteKind.Enemy)
     enemyShip.x = scene.screenWidth()
-    enemyShip.vx = -85
+    enemyShip.vx = -90
     enemyShip.y = randint(10, scene.screenHeight() - 10)
     statusbar = statusbars.create(15, 2, StatusBarKind.EnemyHealth)
     statusbar.attachToSprite(enemyShip)
