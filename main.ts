@@ -41,7 +41,7 @@ mySprite = sprites.create(assets.image`myImage6`, SpriteKind.Player)
 controller.moveSprite(mySprite)
 mySprite.setStayInScreen(true)
 info.setScore(0)
-info.setLife(1)
+info.setLife(5)
 scroller.scrollBackgroundWithSpeed(-90, 0)
 game.onUpdateInterval(2000, function () {
     enemyShip = sprites.create(img`
