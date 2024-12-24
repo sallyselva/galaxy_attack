@@ -1,4 +1,4 @@
-// meta={"simUrl":"https://trg-arcade.userpxt.io/v1.12.58/---simulator","cdnUrl":"https://cdn.makecode.com","version":"0.0.10","target":"arcade","targetVersion":"1.12.58","repo":"sallyselva/galaxy_attack"}
+// meta={"simUrl":"https://trg-arcade.userpxt.io/v1.12.58/---simulator","cdnUrl":"https://cdn.makecode.com","version":"0.0.11","target":"arcade","targetVersion":"1.12.58","repo":"sallyselva/galaxy_attack"}
 // total=1993349 new=5.51% cached=89.33% other=5.16%
 (function (ectx) {
 'use strict';
@@ -589,7 +589,7 @@ const pxsim_pxtrt = pxsim.pxtrt;
 const pxsim_numops = pxsim.numops;
 
 
-function _main___P26067(s) {
+function _main___P26004(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -1282,7 +1282,7 @@ switch (step) {
   case 76:
     r0 = s.retval;
     s.tmp_0 = info_setLife__P2577_mk(s);
-    s.tmp_0.arg0 = 1;
+    s.tmp_0.arg0 = 5;
     s.callLocIdx = 135; s.pc = 77; return s.tmp_0;
   case 77:
     r0 = s.retval;
@@ -1303,13 +1303,13 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-_main___P26067.info = {"start":0,"length":0,"line":0,"column":0,"endLine":0,"endColumn":0,"fileName":"pxt_modules/arcade-background-scroll/main.ts","functionName":"<main>","argumentNames":[]}
-_main___P26067.continuations = [ 53,54,55,56 ]
+_main___P26004.info = {"start":0,"length":0,"line":0,"column":0,"endLine":0,"endColumn":0,"fileName":"pxt_modules/arcade-background-scroll/main.ts","functionName":"<main>","argumentNames":[]}
+_main___P26004.continuations = [ 53,54,55,56 ]
 
-function _main___P26067_mk(s) {
+function _main___P26004_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: _main___P26067, depth: s.depth + 1,
+        parent: s, fn: _main___P26004, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -67967,5 +67967,5 @@ const sprites_BaseSpriteSayRenderer__C2260_VT = mkVTable({
 
 const breakpoints = setupDebugger(1, ["PowerUP___4568","projectile___4572","mySprite___4573","enemyShip___4571","statusbar___4570","CHANNEL___7345"])
 
-return _main___P26067
+return _main___P26004
 })
